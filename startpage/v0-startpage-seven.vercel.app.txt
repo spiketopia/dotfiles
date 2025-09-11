@@ -1,0 +1,293 @@
+"use client"
+
+import type React from "react"
+
+import { useState, useEffect } from "react"
+import {
+Search,
+Cloud,
+CloudRain,
+Sun,
+CloudSun,
+Twitter,
+Bot,
+Mail,
+LineChart,
+TrendingUp,
+PieChart,
+CandlestickChartIcon as Candlestick,
+Github,
+Terminal,
+Music,
+Music2,
+MessageSquareMore,
+Code,
+Monitor,
+Keyboard,
+Image,
+} from "lucide-react"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+
+export default function StartPage() {
+const [currentTime, setCurrentTime] = useState(new Date())
+const [searchQuery, setSearchQuery] = useState("")
+const [weather, setWeather] = useState({ temp: "--", condition: "Loading..." })
+const [weatherIcon, setWeatherIcon] = useState(<Cloud className="h-6 w-6 text-blue-300" />)
+const [weatherColor, setWeatherColor] = useState("text-blue-300")
+
+// Update time every second
+useEffect(() => {
+const timer = setInterval(() => {
+setCurrentTime(new Date())
+}, 1000)
+
+return () => clearInterval(timer)
+}, [])
+
+// Simulate weather data fetch
+useEffect(() => {
+// In a real app, you would fetch from a weather API
+setTimeout(() => {
+const conditions = ["Sunny", "Partly Cloudy", "Cloudy", "Rainy"]
+const randomCondition = conditions[Math.floor(Math.random() * conditions.length)]
+const randomTemp = Math.floor(Math.random() * 15) + 15 // Random temp between 15-30°C
+
+setWeather({
+temp: randomTemp.toString(),
+condition: randomCondition,
+})
+
+// Set weather icon based on condition
+let iconColor = "text-blue-300"
+
+switch (randomCondition) {
+case "Sunny":
+setWeatherIcon(<Sun className="h-6 w-6 text-yellow-300" />)
+iconColor = "text-yellow-300"
+break
+case "Partly Cloudy":
+setWeatherIcon(<CloudSun className="h-6 w-6 text-blue-200" />)
+iconColor = "text-blue-200"
+break
+case "Cloudy":
+setWeatherIcon(<Cloud className="h-6 w-6 text-blue-300" />)
+iconColor = "text-blue-300"
+break
+case "Rainy":
+setWeatherIcon(<CloudRain className="h-6 w-6 text-indigo-300" />)
+iconColor = "text-indigo-300"
+break
+default:
+setWeatherIcon(<Cloud className="h-6 w-6 text-blue-300" />)
+iconColor = "text-blue-300"
+}
+
+setWeatherColor(iconColor)
+}, 1500)
+}, [])
+
+// Handle search
+const handleSearch = (e: React.FormEvent) => {
+e.preventDefault()
+if (searchQuery.trim()) {
+window.open(`https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`, "_blank")
+}
+}
+
+// Format time as HH:MM:SS
+const formattedTime = currentTime.toLocaleTimeString([], {
+hour: "2-digit",
+minute: "2-digit",
+second: "2-digit",
+hour12: true,
+})
+
+// Format date as Weekday, Month Day, Year
+const formattedDate = currentTime.toLocaleDateString([], {
+weekday: "long",
+year: "numeric",
+month: "long",
+day: "numeric",
+})
+
+// Quick links organized by columns with colors
+const columnLinks = [
+// Column 1 - Communication (Purples)
+[
+{
+name: "gmail",
+url: "https://gmail.com",
+icon: <Mail className="h-4 w-4 text-purple-300" />,
+color: "text-purple-300",
+},
+{
+name: "twitter",
+url: "https://x.com/home",
+icon: <Twitter className="h-4 w-4 text-blue-400" />,
+color: "text-blue-400",
+},
+{
+name: "spotify",
+url: "https://open.spotify.com",
+icon: <Music2 className="h-4 w-4 text-green-400" />,
+color: "text-green-400",
+},
+{
+name: "discord",
+url: "https://discord.com/app",
+icon: <MessageSquareMore className="h-4 w-4 text-indigo-400" />,
+color: "text-indigo-400",
+},
+],
+// Column 2 - Development (Greens/Blues)
+[
+{
+name: "gpt",
+url: "https://chat.openai.com/",
+icon: <Bot className="h-4 w-4 text-teal-300" />,
+color: "text-teal-300",
+},
+{
+name: "github",
+url: "https://github.com/",
+icon: <Github className="h-4 w-4 text-violet-300" />,
+color: "text-violet-300",
+},
+{
+name: "v0.dev",
+url: "https://v0.dev",
+icon: <Code className="h-4 w-4 text-cyan-300" />,
+color: "text-cyan-300",
+},
+{
+name: "hacker.news",
+url: "https://news.ycombinator.com/",
+icon: <Terminal className="h-4 w-4 text-orange-300" />,
+color: "text-orange-300",
+},
+],
+// Column 3 - Finance (Oranges/Yellows)
+[
+{
+name: "trading.view",
+url: "https://www.tradingview.com/chart/XhqEOixC/",
+icon: <LineChart className="h-4 w-4 text-blue-300" />,
+color: "text-blue-300",
+},
+{
+name: "sector.spdrs",
+url: "https://www.sectorspdrs.com/sectortracker",
+icon: <PieChart className="h-4 w-4 text-yellow-300" />,
+color: "text-yellow-300",
+},
+{
+name: "earnings",
+url: "https://x.com/Scvvby",
+icon: <TrendingUp className="h-4 w-4 text-green-300" />,
+color: "text-green-300",
+},
+{
+name: "wallstreet.bets",
+url: "https://www.reddit.com/r/wallstreetbets/",
+icon: <Candlestick className="h-4 w-4 text-red-300" />,
+color: "text-red-300",
+},
+],
+// Column 4 - Entertainment (Pinks/Reds)
+[
+{
+name: "wallpaper",
+url: "https://notneelpatel.xyz/WallpaperThemeConverter/",
+icon: <Image className="h-4 w-4 text-pink-300" />,
+color: "text-pink-300",
+},
+{
+name: "desktops",
+url: "https://www.reddit.com/r/desktops/",
+icon: <Monitor className="h-4 w-4 text-purple-400" />,
+color: "text-purple-400",
+},
+{
+name: "monkeytype",
+url: "https://monkeytype.com",
+icon: <Keyboard className="h-4 w-4 text-amber-300" />,
+color: "text-amber-300",
+},
+{
+name: "music.for.prog",
+url: "https://musicforprogramming.net/latest/",
+icon: <Music className="h-4 w-4 text-indigo-300" />,
+color: "text-indigo-300",
+},
+],
+]
+
+return (
+<main className="min-h-screen flex flex-col items-center justify-center p-4 relative">
+<div className="absolute inset-0 z-0">
+<img src="/images/cat_leaves.png" alt="Purple leaf pattern background" className="w-full h-full object-cover" />
+<div className="absolute inset-0 bg-black/30" />
+</div>
+<div className="w-full max-w-2xl mx-auto flex flex-col items-center z-10">
+{/* Time and Date */}
+<div className="text-center mb-4">
+<h1 className="text-5xl font-bold text-white mb-1">{formattedTime}</h1>
+<p className="text-sm text-gray-300">{formattedDate}</p>
+</div>
+
+{/* Weather - No Bubble */}
+<div className="flex items-center gap-2 mb-6">
+<span className={cn("text-lg font-semibold", weatherColor)}>{weather.temp}°C</span>
+<span className="text-sm text-gray-300">{weather.condition}</span>
+{weatherIcon}
+</div>
+
+{/* Search Bar */}
+<form onSubmit={handleSearch} className="w-full mb-6 relative">
+<Input
+type="text"
+placeholder="Search the web..."
+className="w-full h-10 pl-10 pr-4 rounded-lg bg-gray-900/60 border-gray-700 text-white backdrop-blur-sm"
+value={searchQuery}
+onChange={(e) => setSearchQuery(e.target.value)}
+/>
+<Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
+<Button type="submit" className="absolute right-1 top-1 h-8 px-2" variant="ghost">
+Search
+</Button>
+</form>
+
+{/* Quick Links - Organized in Columns */}
+<div className="w-full bg-gray-900/60 backdrop-blur-sm rounded-lg p-3">
+<div className="grid grid-cols-4 gap-x-4 gap-y-0">
+{columnLinks.map((column, colIndex) => (
+<div key={colIndex} className="flex flex-col space-y-3">
+{column.map((link, linkIndex) => (
+<a
+key={`${colIndex}-${linkIndex}`}
+href={link.url}
+target="_blank"
+rel="noopener noreferrer"
+className="flex items-center gap-2 group"
+>
+{link.icon}
+<span
+className={cn(
+"text-xs whitespace-nowrap overflow-hidden text-ellipsis text-gray-300 group-hover:",
+link.color,
+)}
+>
+{link.name}
+</span>
+</a>
+))}
+</div>
+))}
+</div>
+</div>
+</div>
+</main>
+)
+}
