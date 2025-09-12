@@ -30,7 +30,7 @@ winget install AmN.yasb
 * 🧤 [TERMINAL:](https://github.com/lptstr/winfetch) Ascii Terminal Customization
 * 🧣 [OHMYPOSH:](https://ohmyposh.dev/docs/themes) Theme Engine for any shell
 * 🌍 [ZENBROWSER:](https://zen-browser.app) Simple, clean browser
-* 🎇 [KOMOREBI:](https://github.com/LGUG2Z/komorebi) TILE MANAGER
+* 🎇 [KOMOREBI:](https://github.com/LGUG2Z/komorebi) Tile Manager
 
 
 ## 📚 WALLPAPER
