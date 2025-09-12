@@ -260,7 +260,7 @@
 	font-family: Segoe Fluent Icons;
 }
 .media-widget .btn:hover {
-	color: var(--text);
+	color: var(--lavender);
 }
 .media-widget .btn.play {
 	font-size: 13px;
@@ -289,8 +289,8 @@
 /* ========================= */
 
 .power-menu-widget .label {
-    color: var(--red);
-    font-size: 18px;
+    color: var(--maroon);
+    font-size: 17px;
     font-weight: bold;
     text-shadow: 0px 0px 5px var(--yellow);
 }
