@@ -270,9 +270,9 @@ widgets:
         right: 8
       label: "{data}"
       app_list:
-        - { icon: "\uf002", launch: "cmd /c Taskmgr" }
-        - { icon: "\uf0ac", launch: "C:\\Users\\creat\\AppData\\Local\\Vivaldi\\Application\\vivaldi.exe" }
-        - { icon: "\U000f1978", launch: "C:\\Program Files (x86)\\Webull Desktop\\Webull Desktop.exe" }
+        - { icon: "\U000f01d8", launch: "cmd /c Taskmgr" }
+        - { icon: "\U000f15ff", launch: "C:\\Users\\creat\\AppData\\Local\\Vivaldi\\Application\\vivaldi.exe" }
+        - { icon: "\U000f15fc", launch: "C:\\Program Files (x86)\\Webull Desktop\\Webull Desktop.exe" }
 
 # WHKD WIDGET
   whkd:
