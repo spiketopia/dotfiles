@@ -6,7 +6,7 @@ setup you created for youself on any machine.
 ## 🛠️ Install Shortcuts
 MAKE SURE TO USE IN POWERSHELL
 
-[KOMOREBI](https://github.com/LGUG2Z/komorebi)
+[KOMOREBI](https://github.com/LGUG2Z/komorebi) 
 ```powershell
 winget install lgug2z.komorebi lgug2z.whkd
 # Restart your terminal and run komorebi:
@@ -30,6 +30,7 @@ winget install AmN.yasb
 * 🧤 [TERMINAL:](https://github.com/lptstr/winfetch) Ascii Terminal Customization
 * 🧣 [OHMYPOSH:](https://ohmyposh.dev/docs/themes) Theme Engine for any shell
 * 🌍 [ZENBROWSER:](https://zen-browser.app) Simple, clean browser
+* 🌍 [KOMOREBI:](https://github.com/LGUG2Z/komorebi) TILE MANAGER
 
 
 ## 📚 WALLPAPER
