@@ -187,7 +187,7 @@
 }
 .volume-widget .icon {
 	font-size: 15px;
-	color: var(--text);
+	color: var(--blue);
 	margin: 1px 3px 1px 0px;
 }
 
@@ -196,9 +196,9 @@
 /* ========================= */
 
 .microphone-widget .icon {
-	font-size: 18px;
-	color: var(--text);
-	margin: 1px 3px 0px 0px;
+	font-size: 17px;
+	color: var(--mauve);
+	margin: 1px 3px 1px 0px;
 } 
 
 /* ========================= */
@@ -216,7 +216,7 @@
 
 .weather-widget .icon {
 	font-size: 16px;
-	margin: 0 2px 0px 0;
+	margin: 1px 3px 1px 0px;
 }
 .weather-widget .label {
     padding-right:0px;
@@ -248,7 +248,7 @@
 	margin: 0;
 }
 .media-widget .label {
-	color: var(--text);
+	color: var(--teal);
     padding: 0px;
 	padding-right: 13px;
 }
@@ -322,11 +322,11 @@
 .whkd-widget,
 *.dark .whkd-widget {
     background-color: transparent;
-    padding: 0 5px 0 0px;
+    margin: 0px 0px 1px 0px;
 }
 .whkd-widget .icon {
     font-size: 15px;
-    color: var(--text)
+    color: var(--flamingo)
 }
 
 /* ===================== */
