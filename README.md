@@ -31,6 +31,7 @@ winget install AmN.yasb
 * 🧣 [OHMYPOSH:](https://ohmyposh.dev/docs/themes) Theme Engine for any shell
 * 🌍 [ZENBROWSER:](https://zen-browser.app) Simple, clean browser
 * 🎇 [KOMOREBI:](https://github.com/LGUG2Z/komorebi) Tile Manager
+* 🐸 [SPICETIFY:](https://github.com/spicetify) Spotify Skin Theme
 
 
 ## 📚 WALLPAPER
