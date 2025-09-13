@@ -35,7 +35,7 @@ winget install AmN.yasb
 
 
 ## 📚 WALLPAPER
-<img src="https://i.imgur.com/8FsgwAY.png" style="width:300px; height:auto;" alt="example image">
+<img src="https://i.imgur.com/xLahDyY.png" style="width:300px; height:auto;" alt="example image">
 
 ## 🐦‍🔥 PREVIEW
 
