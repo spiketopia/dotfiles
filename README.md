@@ -1,7 +1,7 @@
 ## <img src="https://i.imgur.com/0iOqGa8.png" style="width:300px; height:auto;" alt="example image">
 
-Dotfiles is simply a group personal configuration files, but its much more than that. It is
-something to hone in your productivity while also being creative. Here are my dot files.
+Dotfiles is simply a group personal configuration files, but its much more than that.
+It is something to hone in your productivity while also being creative. Here are my dot files.
 
 ## 🛠️ Install Shortcuts
 MAKE SURE TO USE IN POWERSHELL
