@@ -1,7 +1,7 @@
 ## <img src="https://i.imgur.com/0iOqGa8.png" style="width:300px; height:auto;" alt="example image">
 
-Dotfiles can help make you more productive. But not only that - you'll be able to have that productive 
-setup you created for youself on any machine.
+Dotfiles is simply a group personal configuration files, but its much more than that. It is
+something to hone in your productivity while also being creative. Here are my dot files.
 
 ## 🛠️ Install Shortcuts
 MAKE SURE TO USE IN POWERSHELL
