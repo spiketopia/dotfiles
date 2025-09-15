@@ -27,7 +27,7 @@ winget install AmN.yasb
 * 🕹️ [STARTALLBACK:](https://www.startallback.com) Taskbar Customization
 * 🗨️ [DISCORD:](https://vencord.dev) Alternate Discord (Custom CSS in repository)
 * 🪽 [WINDHAWK:](https://windhawk.net/) Startbar Customization
-* 🧤 [TERMINAL:](https://github.com/lptstr/winfetch) Ascii Terminal Customization
+* 🧤 [WINFETCH:](https://github.com/lptstr/winfetch) Ascii Terminal Customization
 * 🧣 [OHMYPOSH:](https://ohmyposh.dev/docs/themes) Theme Engine for any shell
 * 🌍 [ZENBROWSER:](https://zen-browser.app) Simple, clean browser
 * 🎇 [KOMOREBI:](https://github.com/LGUG2Z/komorebi) Tile Manager
